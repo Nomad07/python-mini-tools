@@ -7,7 +7,7 @@ for attempt in range(1, max_attempts + 1):
     guess = int(input(f"Attempt {attempt}/{max_attempts}. Guess the number (1-10): "))
 
     if guess == number:
-        print("Correct!")
+        print(f"Correct! You guessed the number in {attempt} attempt(s).")
         break
     elif guess < number:
         print("Too low! Try again.")
