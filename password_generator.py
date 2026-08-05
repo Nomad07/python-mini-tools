@@ -1,7 +1,7 @@
 import random
 import string
 
-length = 12
+length = int(input("Enter password length: "))
 
 characters = string.ascii_letters + string.digits
 password = ""
