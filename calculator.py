@@ -19,7 +19,21 @@ def divide(a, b):
 first = float(input("Enter first number: "))
 second = float(input("Enter second number: "))
 
-print("Addition:", add(first, second))
-print("Subtraction:", subtract(first, second))
-print("Multiplication:", multiply(first, second))
-print("Division:", divide(first, second))
+print("Choose operation:")
+print("1 - Addition")
+print("2 - Subtraction")
+print("3 - Multiplication")
+print("4 - Division")
+
+choice = input("Your choice: ")
+
+if choice == "1":
+    print("Result:", add(first, second))
+elif choice == "2":
+    print("Result:", subtract(first, second))
+elif choice == "3":
+    print("Result:", multiply(first, second))
+elif choice == "4":
+    print("Result:", divide(first, second))
+else:
+    print("Invalid choice")
