@@ -1,4 +1,6 @@
-# Simple greeting program
+def greet(name):
+    print(f"Hello, {name}!")
+
 
 name = input("What is your name? ")
-print(f"Hello, {name}!")
+greet(name)
