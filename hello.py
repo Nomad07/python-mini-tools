@@ -5,5 +5,10 @@ def greet(name):
         print("Hello, World!")
 
 
-name = input("What is your name? ")
-greet(name)
+def main():
+    name = input("What is your name? ")
+    greet(name)
+
+
+if __name__ == "__main__":
+    main()
