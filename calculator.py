@@ -4,7 +4,11 @@ second = float(input("Enter second number: "))
 addition = first + second
 subtraction = first - second
 multiplication = first * second
-division = first / second
+
+if second != 0:
+    division = first / second
+else:
+    division = "Cannot divide by zero"
 
 print("Addition:", addition)
 print("Subtraction:", subtraction)
