@@ -17,6 +17,10 @@ def generate_password(length):
     return password
 
 
-length = int(input("Enter password length: "))
+def main():
+    length = int(input("Enter password length: "))
+    print("Generated password:", generate_password(length))
 
-print("Generated password:", generate_password(length))
+
+if __name__ == "__main__":
+    main()
