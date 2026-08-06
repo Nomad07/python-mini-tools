@@ -10,8 +10,13 @@ def count_lines(text):
     return len(text.splitlines())
 
 
-text = input("Enter some text: ")
+def main():
+    text = input("Enter some text: ")
 
-print("Characters:", count_characters(text))
-print("Words:", count_words(text))
-print("Lines:", count_lines(text))
+    print("Characters:", count_characters(text))
+    print("Words:", count_words(text))
+    print("Lines:", count_lines(text))
+
+
+if __name__ == "__main__":
+    main()
