@@ -1,9 +1,17 @@
+def count_characters(text):
+    return len(text)
+
+
+def count_words(text):
+    return len(text.split())
+
+
+def count_lines(text):
+    return len(text.splitlines())
+
+
 text = input("Enter some text: ")
 
-characters = len(text)
-words = len(text.split())
-lines = len(text.splitlines())
-
-print("Characters:", characters)
-print("Words:", words)
-print("Lines:", lines)
+print("Characters:", count_characters(text))
+print("Words:", count_words(text))
+print("Lines:", count_lines(text))
