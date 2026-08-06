@@ -19,6 +19,11 @@ def generate_password(length):
 
 def main():
     length = int(input("Enter password length: "))
+
+    if length <= 0:
+        print("Password length must be greater than zero.")
+        return
+
     print("Generated password:", generate_password(length))
 
 
