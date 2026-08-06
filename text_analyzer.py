@@ -23,13 +23,21 @@ def word_frequency(text):
     return frequency
 
 
+def most_common_words(text):
+    frequency = word_frequency(text)
+    return sorted(frequency.items(), key=lambda item: item[1], reverse=True)
+
+
 def main():
     text = input("Enter some text: ")
 
     print("Characters:", count_characters(text))
     print("Words:", count_words(text))
     print("Lines:", count_lines(text))
-    print("Word frequency:", word_frequency(text))
+
+    print("Most common words:")
+    for word, count in most_common_words(text):
+        print(word, "-", count)
 
 
 if __name__ == "__main__":
