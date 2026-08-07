@@ -15,6 +15,13 @@ def load_tasks():
     return tasks
 
 
+def save_tasks(tasks):
+    with open("tasks.txt", "w", encoding="utf-8") as file:
+        for task in tasks:
+            status = "1" if task["completed"] else "0"
+            file.write(f"{status}|{task['name']}\n")
+
+
 tasks = load_tasks()
 
 
@@ -74,11 +81,7 @@ while True:
                 print("Invalid task number.")
 
     elif choice == "5":
-        with open("tasks.txt", "w", encoding="utf-8") as file:
-            for task in tasks:
-                status = "1" if task["completed"] else "0"
-                file.write(f"{status}|{task['name']}\n")
-
+        save_tasks(tasks)
         print("Tasks saved.")
         break
 
