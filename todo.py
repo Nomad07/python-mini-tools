@@ -28,6 +28,17 @@ def add_task(tasks):
     print("Task added.")
 
 
+def show_tasks(tasks):
+    print("\nYour tasks:")
+
+    if not tasks:
+        print("No tasks yet.")
+    else:
+        for number, task in enumerate(tasks, start=1):
+            status = "✓" if task["completed"] else " "
+            print(f"{number}. [{status}] {task['name']}")
+
+
 tasks = load_tasks()
 
 
@@ -45,14 +56,7 @@ while True:
         add_task(tasks)
 
     elif choice == "2":
-        print("\nYour tasks:")
-
-        if not tasks:
-            print("No tasks yet.")
-        else:
-            for number, task in enumerate(tasks, start=1):
-                status = "✓" if task["completed"] else " "
-                print(f"{number}. [{status}] {task['name']}")
+        show_tasks(tasks)
 
     elif choice == "3":
         if not tasks:
