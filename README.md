@@ -23,3 +23,17 @@ A simple Python todo list application with:
 - Persistent task storage
 - Completed task status
 - Simple and clean Python structure
+
+- ## Python Mini Tools
+
+A collection of small Python projects for learning and practice.
+
+### Projects
+
+- `hello.py` - Basic Python introduction
+- `calculator.py` - Simple calculator
+- `guess_number.py` - Number guessing game
+- `password_generator.py` - Random password generator
+- `text_analyzer.py` - Text analysis tool
+- `unit_converter.py` - Unit conversion utility
+- `todo.py` - Command line todo application with file storage
