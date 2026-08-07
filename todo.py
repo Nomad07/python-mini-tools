@@ -22,6 +22,12 @@ def save_tasks(tasks):
             file.write(f"{status}|{task['name']}\n")
 
 
+def add_task(tasks):
+    task = input("Enter a task: ")
+    tasks.append({"name": task, "completed": False})
+    print("Task added.")
+
+
 tasks = load_tasks()
 
 
@@ -36,9 +42,7 @@ while True:
     choice = input("Choose an option: ")
 
     if choice == "1":
-        task = input("Enter a task: ")
-        tasks.append({"name": task, "completed": False})
-        print("Task added.")
+        add_task(tasks)
 
     elif choice == "2":
         print("\nYour tasks:")
