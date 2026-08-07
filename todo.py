@@ -39,6 +39,22 @@ def show_tasks(tasks):
             print(f"{number}. [{status}] {task['name']}")
 
 
+def delete_task(tasks):
+    if not tasks:
+        print("No tasks to delete.")
+        return
+
+    show_tasks(tasks)
+
+    number = int(input("Enter task number to delete: "))
+
+    if 1 <= number <= len(tasks):
+        removed = tasks.pop(number - 1)
+        print("Deleted:", removed["name"])
+    else:
+        print("Invalid task number.")
+
+
 tasks = load_tasks()
 
 
@@ -59,19 +75,7 @@ while True:
         show_tasks(tasks)
 
     elif choice == "3":
-        if not tasks:
-            print("No tasks to delete.")
-        else:
-            for number, task in enumerate(tasks, start=1):
-                print(number, "-", task["name"])
-
-            number = int(input("Enter task number to delete: "))
-
-            if 1 <= number <= len(tasks):
-                removed = tasks.pop(number - 1)
-                print("Deleted:", removed["name"])
-            else:
-                print("Invalid task number.")
+        delete_task(tasks)
 
     elif choice == "4":
         if not tasks:
