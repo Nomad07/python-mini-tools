@@ -6,7 +6,7 @@ while True:
     print("2 - Show tasks")
     print("3 - Delete task")
     print("4 - Complete task")
-    print("5 - Quit")
+    print("5 - Save and Quit")
 
     choice = input("Choose an option: ")
 
@@ -56,8 +56,16 @@ while True:
                 print("Invalid task number.")
 
     elif choice == "5":
-        print("Goodbye!")
+        with open("tasks.txt", "w", encoding="utf-8") as file:
+            for task in tasks:
+                status = "1" if task["completed"] else "0"
+                file.write(f"{status}|{task['name']}\n")
+
+        print("Tasks saved.")
         break
+
+    else:
+        print("Invalid choice.")
 
     else:
         print("Invalid choice.")
