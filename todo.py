@@ -1,5 +1,17 @@
 tasks = []
 
+try:
+    with open("tasks.txt", "r", encoding="utf-8") as file:
+        for line in file:
+            status, name = line.strip().split("|", 1)
+            tasks.append({
+                "name": name,
+                "completed": status == "1"
+            })
+except FileNotFoundError:
+    pass
+
+
 while True:
     print("\nTodo List")
     print("1 - Add task")
@@ -64,10 +76,5 @@ while True:
         print("Tasks saved.")
         break
 
-    else:
-        print("Invalid choice.")
-
-    else:
-        print("Invalid choice.")
     else:
         print("Invalid choice.")
