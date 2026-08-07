@@ -1,15 +1,21 @@
-tasks = []
+def load_tasks():
+    tasks = []
 
-try:
-    with open("tasks.txt", "r", encoding="utf-8") as file:
-        for line in file:
-            status, name = line.strip().split("|", 1)
-            tasks.append({
-                "name": name,
-                "completed": status == "1"
-            })
-except FileNotFoundError:
-    pass
+    try:
+        with open("tasks.txt", "r", encoding="utf-8") as file:
+            for line in file:
+                status, name = line.strip().split("|", 1)
+                tasks.append({
+                    "name": name,
+                    "completed": status == "1"
+                })
+    except FileNotFoundError:
+        pass
+
+    return tasks
+
+
+tasks = load_tasks()
 
 
 while True:
