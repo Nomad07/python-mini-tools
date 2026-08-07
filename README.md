@@ -37,3 +37,14 @@ A collection of small Python projects for learning and practice.
 - `text_analyzer.py` - Text analysis tool
 - `unit_converter.py` - Unit conversion utility
 - `todo.py` - Command line todo application with file storage
+
+- ## How to Run
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/Nomad07/python-mini-tools.git
+
+cd python-mini-tools
+
+python todo.py
