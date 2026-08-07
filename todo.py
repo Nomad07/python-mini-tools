@@ -71,35 +71,39 @@ def complete_task(tasks):
         print("Invalid task number.")
 
 
-tasks = load_tasks()
+def main():
+    tasks = load_tasks()
+
+    while True:
+        print("\nTodo List")
+        print("1 - Add task")
+        print("2 - Show tasks")
+        print("3 - Delete task")
+        print("4 - Complete task")
+        print("5 - Save and Quit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            add_task(tasks)
+
+        elif choice == "2":
+            show_tasks(tasks)
+
+        elif choice == "3":
+            delete_task(tasks)
+
+        elif choice == "4":
+            complete_task(tasks)
+
+        elif choice == "5":
+            save_tasks(tasks)
+            print("Tasks saved.")
+            break
+
+        else:
+            print("Invalid choice.")
 
 
-while True:
-    print("\nTodo List")
-    print("1 - Add task")
-    print("2 - Show tasks")
-    print("3 - Delete task")
-    print("4 - Complete task")
-    print("5 - Save and Quit")
-
-    choice = input("Choose an option: ")
-
-    if choice == "1":
-        add_task(tasks)
-
-    elif choice == "2":
-        show_tasks(tasks)
-
-    elif choice == "3":
-        delete_task(tasks)
-
-    elif choice == "4":
-        complete_task(tasks)
-
-    elif choice == "5":
-        save_tasks(tasks)
-        print("Tasks saved.")
-        break
-
-    else:
-        print("Invalid choice.")
+if __name__ == "__main__":
+    main()
