@@ -38,13 +38,16 @@ A collection of small Python projects for learning and practice.
 - `unit_converter.py` - Unit conversion utility
 - `todo.py` - Command line todo application with file storage
 
-- ## How to Run
+## How to Run
 
 1. Clone the repository
 
-```bash
 git clone https://github.com/Nomad07/python-mini-tools.git
 
+2. Open the project folder
+
 cd python-mini-tools
+
+3. Run the application
 
 python todo.py
