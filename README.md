@@ -16,3 +16,10 @@ A simple Python todo list application with:
 - Mark tasks as completed
 - Save tasks to a file
 - Load tasks after restart
+
+### Features
+
+- Menu based interface
+- Persistent task storage
+- Completed task status
+- Simple and clean Python structure
