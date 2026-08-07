@@ -55,6 +55,22 @@ def delete_task(tasks):
         print("Invalid task number.")
 
 
+def complete_task(tasks):
+    if not tasks:
+        print("No tasks to complete.")
+        return
+
+    show_tasks(tasks)
+
+    number = int(input("Enter task number to complete: "))
+
+    if 1 <= number <= len(tasks):
+        tasks[number - 1]["completed"] = True
+        print("Task completed.")
+    else:
+        print("Invalid task number.")
+
+
 tasks = load_tasks()
 
 
@@ -78,19 +94,7 @@ while True:
         delete_task(tasks)
 
     elif choice == "4":
-        if not tasks:
-            print("No tasks to complete.")
-        else:
-            for number, task in enumerate(tasks, start=1):
-                print(number, "-", task["name"])
-
-            number = int(input("Enter task number to complete: "))
-
-            if 1 <= number <= len(tasks):
-                tasks[number - 1]["completed"] = True
-                print("Task completed.")
-            else:
-                print("Invalid task number.")
+        complete_task(tasks)
 
     elif choice == "5":
         save_tasks(tasks)
